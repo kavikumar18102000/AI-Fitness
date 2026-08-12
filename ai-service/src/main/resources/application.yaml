@@ -1,0 +1,43 @@
+#server:
+#  port: 9094
+
+spring:
+  application:
+    name: ai-service
+
+#moved this to config server
+#  data:
+#    mongodb:
+#      uri: mongodb://admin:admin123@localhost:27017/fitness-activity?authSource=admin&directConnection=true
+#      database: fitness-activity
+#
+#  #connection to locally(docker or installed in system local) running rabbitmq server
+#  rabbitmq:
+#    host: localhost
+#    port: 5672
+#    username: guest
+#    password: guest
+#
+#eureka:
+#  client:
+#    service-url:
+#      defaultZone: http://localhost:9093/eureka
+#
+##custom definitions(not spring boot configs)
+#rabbitmq:
+#  exchange:
+#    name: fitness.exchange
+#  queue:
+#    name: activity.queue
+#  routing:
+#    key: activity.tracking
+#
+##AI model api key config
+#gemini:
+#  api:
+#    url: ${GEMINI_API_URL}
+#    key: ${GEMINI_API_KEY}
+
+  #configuration to get properties from config server
+  config:
+    import: optional:configserver:http://localhost:9095

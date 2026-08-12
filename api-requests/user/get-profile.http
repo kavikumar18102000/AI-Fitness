@@ -1,0 +1,4 @@
+### GET request to example server
+GET http://localhost:9091/api/users/bebd9bac-0540-415d-a314-41ec8306f9b6
+
+###

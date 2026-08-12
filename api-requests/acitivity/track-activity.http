@@ -1,0 +1,16 @@
+POST http://localhost:9092/api/activities/trackActivity
+Content-Type: application/json
+
+{
+  "userId": "bebd9bac-0540-415d-a314-41ec8306f9b6",
+  "type": "YOGA",
+  "duration": 30,
+  "caloriesBurned": 300,
+  "startTime": "2026-06-27T10:15:30",
+  "endTime": "2026-06-27T11:15:30",
+  "additionalMetrics": {
+    "distance": 5.2,
+    "averageSpeed": 10.4,
+    "maxHeartRate": 165
+  }
+}

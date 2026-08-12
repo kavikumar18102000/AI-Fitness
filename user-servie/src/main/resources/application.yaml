@@ -1,0 +1,26 @@
+server:
+  port: 9091
+
+spring:
+  application:
+    name: user-service
+
+  #moved this part to config server
+#  datasource:
+#    url: jdbc:postgresql://localhost:5440/fitness_user
+#    username: postgres
+#    password: root
+#
+#  jpa:
+#    hibernate:
+#      ddl-auto: update
+#    database-platform: org.hibernate.dialect.PostgreSQLDialect
+#
+#eureka:
+#  client:
+#    service-url:
+#      defaultZone: http://localhost:9093/eureka
+
+#configuration to get properties from config server
+  config:
+    import: optional:configserver:http://localhost:9095

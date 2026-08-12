@@ -1,0 +1,4 @@
+#GET http://localhost:9094/api/recommendation/activity/6a465cf996745750a504691f
+
+#thorugh  api-gateway
+GET http://localhost:9090/api/recommendation/activity/6a465cf996745750a504691f

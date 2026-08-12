@@ -1,0 +1,11 @@
+### post request to example server
+POST http://localhost:9091/api/users/register
+Content-Type: application/json
+
+{
+ "email": "joe@gmail.con",
+  "firstName": "David",
+  "lastName": "joe",
+  "password": "123456"
+}
+###
