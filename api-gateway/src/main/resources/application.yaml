@@ -1,0 +1,40 @@
+server:
+  port: 9090
+
+spring:
+  application:
+    name: api-gateway
+
+#moved this part to config server
+#  cloud:
+#    gateway:
+#      server:
+#        webflux:
+#          routes:
+#            - id: user-service
+#              uri: lb://USER-SERVICE #lb-> load balancer
+#              predicates:
+#                - Path=/api/users/**
+#
+#            - id: activity-service
+#              uri: lb://ACTIVITY-SERVICE #lb-> load balancer
+#              predicates:
+#                - Path=/api/activities/**
+#
+#            - id: ai-service
+#              uri: lb://AI-SERVICE #lb-> load balancer
+#              predicates:
+#                - Path=/api/recommendation/**
+#
+#eureka:
+#  client:
+#    service-url:
+#      defaultZone: http://localhost:9093/eureka
+
+
+    #configuration to get properties from config server
+  config:
+    import: optional:configserver:http://localhost:9095
+
+
+
